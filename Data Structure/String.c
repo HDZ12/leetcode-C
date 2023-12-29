@@ -39,3 +39,4 @@ int main()
   isalnum();// 检查是否为字母和数字
   isprint();// 检查是否是可打印字符
   isgraph();// 检查是否是图形字符，等效于 isalnum() | ispunct()
+}
