@@ -9,10 +9,10 @@
 链表就是链式存储的线性表。根据指针域的不同，链表分为单向链表、双向链表、循环链表等等。
 ```C
 #include<stdio.h>
-#include<stdlin.h>
+#include<stdlib.h>
 typedef struct Node{
   int data;
-  struct Node*next;
+  struct Node *next;
 } Node;
 
 typedef struct LinkedList {
@@ -20,3 +20,23 @@ typedef struct LinkedList {
   int size;
 } LinkedList;
 ```
+## 链表基本操作
+1. **创建链表**
+```C
+Node *initlink(){
+  Node *p = (Node *)malloc(sizeof(Node));
+  Node *temp = p; //声明指针指向头节点，用于遍历链表
+  for(int i=0;i<5;i++){
+    Node *a = (Node *)malloc(sizeof(Node));
+    a->data = i;
+    a->next = NULL;
+    temp->next = a;
+    temp = temp->next;
+  }
+  return p;
+}
+```
+2. **插入元素**
+```C
+Node *insertdata(Node *p ,int data,int add){
+  
