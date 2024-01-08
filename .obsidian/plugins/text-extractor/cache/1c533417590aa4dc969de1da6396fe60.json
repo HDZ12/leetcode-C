@@ -1,0 +1,1 @@
+{"path":"附件/Pasted image 20231102134827.png","text":"word.txt RDD(lines) RDD(wordArray) #5125 :map() Spark is fast sc.textFile(...) lines.map(line => line.split(\" \")) | lines.flatMap(line => line.split(\" \")) : RDD(words) : | | i - P N Hmap()#% 1545 2 (fyword Array Spark' better’ AN T2 “H” (flat), HL7E £ 1 flatMap() 3 A1 1) 45 Hiwords","libVersion":"0.2.4","langs":"eng"}

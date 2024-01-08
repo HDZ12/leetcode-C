@@ -1,0 +1,1 @@
+{"path":"附件/1698904016827.png","text":"Scala val data - sc.parallelize(List(1,2,3,4)) val result - data.filter(x=>x>2) result.collect val lines - sc.textFile(file:///user/word.txt) val lineswithspark - lines.filter(line=>line.contains(\"spark\"))","libVersion":"0.2.4","langs":"eng"}

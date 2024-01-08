@@ -1,0 +1,11 @@
+{
+  "defaultHide": false,
+  "selectorTag": "#",
+  "includeHighlighted": true,
+  "includeUnderlined": true,
+  "includeBolded": true,
+  "fixedClozeWidth": false,
+  "editorMenuAddCloze": true,
+  "editorMenuAddClozeWithHint": true,
+  "editorMenuRemoveCloze": true
+}

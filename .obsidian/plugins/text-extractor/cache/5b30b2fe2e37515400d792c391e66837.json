@@ -1,0 +1,1 @@
+{"path":"附件/1698904274881.png","text":"Scala val data - sc.parpallelize(List(\"I am learning Spark”,\"Ilike Spark\")) data.map(x=>x.split(\" \")) res7.colllect data.flatMap(x=>x.split(\" *)) res9. collect","libVersion":"0.2.4","langs":"eng"}

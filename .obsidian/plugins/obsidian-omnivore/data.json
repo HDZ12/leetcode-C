@@ -1,0 +1,23 @@
+{
+  "dateHighlightedFormat": "yyyy-MM-dd HH:mm:ss",
+  "dateSavedFormat": "yyyy-MM-dd HH:mm:ss",
+  "apiKey": "5e8e2ab3-1bd4-4ab8-af32-1524d9854299",
+  "filter": "ALL",
+  "syncAt": "2024-01-06T14:45:32",
+  "customQuery": "",
+  "template": "\n#Omnivore\nOmnivoreURL: {{{omnivoreUrl}}}\nOriginURL: {{{originalUrl}}}\n\n{{{ content }}}\n\n{{#highlights.length}}\n## 高亮\n\n{{#highlights}}\n> {{{text}}} [⤴️]({{{highlightUrl}}}) {{#labels}} #{{name}} {{/labels}} ^{{{highlightID}}}\n{{#note}}\n\n{{{note}}}\n{{/note}}\n\n{{/highlights}}\n{{/highlights.length}}",
+  "highlightOrder": "LOCATION",
+  "syncing": false,
+  "folder": "Omnivore",
+  "folderDateFormat": "yyyy-MM-dd",
+  "endpoint": "https://api-prod.omnivore.app/api/graphql",
+  "filename": "{{{title}}}",
+  "filenameDateFormat": "yyyy-MM-dd",
+  "attachmentFolder": "附件",
+  "version": "1.7.1",
+  "isSingleFile": false,
+  "frequency": 0,
+  "intervalId": 0,
+  "frontMatterVariables": [],
+  "frontMatterTemplate": ""
+}
