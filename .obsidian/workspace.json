@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structure/Queue.md",
+                "file": "README.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Structure/Queue.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Structure/Queue.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Structure/Queue.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,15 +148,15 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "6b9866df21c180c6",
+  "active": "a75c76bdc550b80b",
   "lastOpenFiles": [
-    "Data Structure/Array.md",
-    "Data Structure/Link-list.md",
-    "Data Structure/Queue.md",
-    "Data Structure/Stack.md",
-    "README.md",
     "无重复字符的最长字串.md",
     "两数之和.md",
-    "两数相加.md"
+    "两数相加.md",
+    "Data Structure/Stack.md",
+    "Data Structure/Queue.md",
+    "Data Structure/Link-list.md",
+    "Data Structure/Array.md",
+    "README.md"
   ]
 }
