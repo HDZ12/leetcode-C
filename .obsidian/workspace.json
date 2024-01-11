@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "Data Structure/Queue.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9f51b2a2d1b5d185",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Data Structure/Queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Data Structure/Queue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Data Structure/Queue.md"
               }
             }
           }
@@ -150,13 +151,13 @@
   },
   "active": "a75c76bdc550b80b",
   "lastOpenFiles": [
-    "无重复字符的最长字串.md",
-    "两数之和.md",
-    "两数相加.md",
     "Data Structure/Stack.md",
     "Data Structure/Queue.md",
+    "无重复字符的最长字串.md",
     "Data Structure/Link-list.md",
-    "Data Structure/Array.md",
-    "README.md"
+    "两数相加.md",
+    "README.md",
+    "两数之和.md",
+    "Data Structure/Array.md"
   ]
 }
