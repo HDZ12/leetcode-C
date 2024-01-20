@@ -150,3 +150,215 @@ void printArrayQueue(ArrayQueue *queue){
 }
 ```
 # 双向队列
+在队列中，我们仅能在头部删除或在尾部添加元素。提供 了更高的灵活性，允许在头部和尾部执行元素的添加或删除操作。
+## 常用操作
+### 链表实现
+```c
+/*双向链表节点*/
+typedef struct DoublyListNode{
+		int val;
+		DoblyListNode *next;
+		DoblyListNode *prev;
+}DoublyListNode;
+
+/*构造函数*/
+DoublyListNode *newDoublyListNode(int num){
+		DoublyListNode *new = (DoublyListNode *)malloc(sizeof(DoublyListNode));
+		new->val = num;
+		new->next = NULL;
+		new->prev = NULL;
+		return new;
+}
+
+/*删除函数*/
+val delDoublyListNode(DoublyListNode *node){
+		free(node)
+}
+/*基于双向节点的双向队列*/
+typedef struct {
+		DoublyListNode *front, *rear;
+		int queSize;
+}LinkedListQueue;
+
+/*构造函数*/
+LinkedListQueue *newLinkedListqueue(){
+		LinkedListQueue *deque = (LinkedListQueue *)malloc(sizeof(LinkedListQueue));
+		deque->front = NULL;
+		deque->rear = NULL;
+		deque->queSize = 0;
+		return deque;
+}
+/*删除队列*/
+void delLinkedListdeque(LinkedListQueue *deque){
+		for(int i=0;i < deque->queSize;i++){
+			DoublyListNode *tmp = deque->front;
+			deque->front = deque->front->next;
+		}
+		free(deque);
+}
+
+int size(LinkedListQueue *deque){
+		return deque->quesize;
+}
+/*判断队列是否为空*/
+bool empty(LinkedListQueue *deque){
+		return ((deque->queSize)==0);
+}
+/*入队*/
+void push(LinkedListQueue *deque,int num,bool isFront){
+		DoublyListNode *node = newDoublyListNode(num);
+		if(empty(deque)){
+			deque->front = deque->rear = node;
+		}
+		else if(isFront){
+			deque->front->prev = node;
+			node->next = deque->front;
+			deque->front = node;
+		}
+		else{
+			deque->rear->next = node;
+			node->prev = deque->rear;
+			deque->rear = node;
+		}
+		deque->queSize++;
+}
+/*队首入队*/
+void pushFirst(LinkedListQueue *deque,int num){
+		push(deque,num,true);
+}
+/*访问队首元素*/
+int peekFirst(LinkedListQueue *deque){
+		assert(size(deque) && deque->front);
+		return deque->front->val;
+}
+/*访问队尾元素*/
+int peekLast(LinkedListQueue *deque){
+		assert(size(deque)&&deque->rear);
+		return deque->rear->val;
+}
+/*出队*/
+void pop(LinkedListQueue *deque,bool isFront){
+		if(empty(deque))
+			return -1;
+		int val;
+		if(isFront){
+			val = peekFirst(deque);
+			DoublyListNode *fnext = deque->front->next;
+			if(fnext){
+				fnext->prev = NULL;
+				deque->front->next = NULL;
+				delDoublyListNode(deque->front);
+			}
+			deque->front = fnext;
+		}
+		else{
+			val = peekLast(deque);
+			DoublyListNode *rprev = deque->rear->prev;
+			if(rprev){
+				rprev->next = NULL;
+				deque->rear->prev =NULL;
+				delDoublyListNode(deque->rear);
+			}
+			deque->rear = rprev;
+		}
+		deque->queSize---;
+		return val;
+}
+/*打印队列*/
+void printLinkedListQueue(LinkedListQueue *queue){
+		int arr[deque->queSize];
+		for(int i = 0 ; i < deque->queSize;i++){
+			arr[0] = deque->front->val;
+			deque->front = deque->front->next;
+		}
+		printArray(arr,deque->queSize);
+}
+```
+## 基于数组实现
+```c
+typedef struct{
+	int *nums;
+	int front;
+	int queSize;
+	int queCapacity;
+} ArrayDeque;
+/*构造函数*/
+ArrayDeque *newArrayDeque(int capacity){
+		ArrayDeque *deque = (ArrayDeque *)malloc(sizeof(ArrayDeque));
+		deque->queCapacity = capacity;
+		deque->nums = (int *)malloc(sizeof(int) *deque->queCapacity);
+		deque->front = deque->queSize = 0;
+		return deque
+}
+/*删除函数*/
+void delArrayDeque(ArrqyDeque *deque){
+		free(deque->nums);
+		free(deque);
+}
+/*获取容量*/
+int capacity(ArrayDeque *deque){
+		return deque->queCapacity;
+}
+/*获取长度*/
+int size(ArrayDeque *deque){
+		return deque->queSize;
+}
+/*判断是否为空*/
+bool empty(ArrayDeque *deque){
+		return (deque->queSize)==0;
+}
+/*计算环形数组索引*/
+int dequeindex(ArrayDeque *deque,int i){
+	return (i+capacity(deque)) % capacity(deque);
+}
+/*队首入队*/
+void pushFirst(ArrayDeque *deque,int num){
+		if(deque->queSize == capacity(queue)){
+			printf("双向队列已满/r/n");
+			return;
+		}
+		deque->front = dequeIndex(deque,deque->front-1);
+		deque->nums[deque->front] = num;
+		deque->queSize++;
+}
+/*队尾入队*/
+void pushLast(ArrayDeque *deque,int num){
+		if(deque->queSize==capacity(deque))
+			return;
+		int rear = dequeIndex(deque,que->front +que->queSize);
+		deque->nums[rear] = num;
+		deque->queSize++;
+}
+/*访问队首元素*/
+int peekFirst(ArrayDeque *deque){
+		assert(empty(deque)==0);
+		return deque->nums[deque->front];
+}
+/*访问队尾元素*/
+int peekLast(ArrayDeque *deque){
+		assert(emprt(deque)==0);
+		int last = dequeIndex(deque,deque->front+deque->queSize-1);
+		return deque->nums[last];
+}
+/*队首出队*/
+int popFirst(ArrayDeque *deque){
+		int num = peekFirst(deque);
+		deque->front = dequeIndex(deque,deque->front+1);
+		deque->queSize--;
+		return num;
+}
+/*队尾出队*/
+int popLast(ArrayDeque *deque){
+		int num = peekLast(deque)
+		deque->queSize--;
+		return num;
+}
+/*打印队列*/
+void printArrayDeque(ArrayDeque *deque){
+		int arr[deque->queSize];
+		for(int i=0,j=deque->front;i<deque->queSize;i++){
+			arr[i] = deque->nums[j%deque->capacity];
+		}
+		printArray(arr,deque->queSize);
+}
+```
